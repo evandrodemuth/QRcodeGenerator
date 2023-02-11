@@ -18,13 +18,15 @@
             <h2>Insert a link bellow to Generator your QR Code</h2>
         </div>
         <form action="/" method="POST">
-            <input type="text" name="link">
+            <input type="text" name="link" placeholder="Paste your text here">
             <button type="submit">Generate QR Code</button>
         </form>
+        {% if data %}
         <div class="generated">
             <img src="{{data}}" alt= "">
             <p>Here is the QR code we generated for you 🚀 </p>
-        </div>         
+        </div>       
+        {% endif %}  
     </body>
 </html>
 
